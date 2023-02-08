@@ -1,5 +1,10 @@
 // list = [2, 3, 4, 6];
 
+// let a = 3;
+// var b = 4;
+// const c = 5;
+// console.log(c++);
+
 // for (let i = 0; i < list.length; i++) {
 //   console.log(list[i]);
 // }
@@ -24,15 +29,25 @@ obj = {
 };
 
 // console.log(obj.name);
-// obj.age = 34;
+obj.age = 34;
 // console.log(obj.age);
-// console.table(obj);
+console.table(obj);
 
 // delete obj.name;
 // obj.name = undefined;
 
 // for (key in obj) {
 //   console.log(key, obj[key]);
+// }
+
+list = [2, 3, 4, 6];
+
+if (list.includes(4)) {
+  console.log("OH yess");
+}
+
+// for (item of list) {
+//   console.log(item);
 // }
 
 // let a = 4;
