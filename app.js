@@ -16,3 +16,23 @@
 // }
 
 // console.log(myFunc(3));
+
+obj = {
+  name: "ali",
+  id: 3,
+  isDead: false,
+};
+
+// console.log(obj.name);
+// obj.age = 34;
+// console.log(obj.age);
+// console.table(obj);
+
+delete obj.name;
+// obj.name = undefined;
+
+for (key in obj) {
+  console.log(key, obj[key]);
+}
+
+// console.table(obj);
