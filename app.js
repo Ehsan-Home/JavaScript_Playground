@@ -31,7 +31,7 @@ obj = {
 // console.log(obj.name);
 obj.age = 34;
 // console.log(obj.age);
-console.table(obj);
+// console.table(obj);
 
 // delete obj.name;
 // obj.name = undefined;
@@ -40,11 +40,11 @@ console.table(obj);
 //   console.log(key, obj[key]);
 // }
 
-list = [2, 3, 4, 6];
+// list = [2, 3, 4, 6];
 
-if (list.includes(4)) {
-  console.log("OH yess");
-}
+// if (list.includes(4)) {
+//   console.log("OH yess");
+// }
 
 // for (item of list) {
 //   console.log(item);
@@ -56,6 +56,21 @@ if (list.includes(4)) {
 // }
 
 list = [2, 3, 4, 6];
+
+str = "ehsan";
+
+for (let char of str) {
+  console.log(char);
+}
+
+for (let i = 0; i < str.length; i++) {
+  console.log(`index: ${i} , value: ${str[i]}`);
+}
+
+console.log("****");
+for (let index in str) {
+  console.log(index);
+}
 
 // if (list.includes(8)) {
 //   console.log("3 is in the list");
