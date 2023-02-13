@@ -104,7 +104,23 @@ let str = "323.24";
 
 let strInNum = parseFloat(str);
 
+let num = 3;
+
+let numInStr = num.toString();
+
+if (numInStr === "3") {
+  console.log("OH YESS BABY");
+}
+
 console.log(strInNum);
+
+let list = [1000, 10, 1, 2, 3, 4];
+
+let list2 = list.sort((a, b) => a - b);
+
+list2.reverse();
+
+console.log(list2);
 
 // if (str === 323) {
 //   console.log("TRUE");
