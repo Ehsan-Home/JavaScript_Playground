@@ -67,6 +67,12 @@ for (let i = 0; i < str.length; i++) {
   console.log(`index: ${i} , value: ${str[i]}`);
 }
 
+if (str === "ehsan") {
+  console.log("Equal");
+} else {
+  console.log("NOT Equal");
+}
+
 console.log("****");
 for (let index in str) {
   console.log(index);
