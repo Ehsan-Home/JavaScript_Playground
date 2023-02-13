@@ -1,129 +1,129 @@
+// // // list = [2, 3, 4, 6];
+
+// // // let a = 3;
+// // // var b = 4;
+// // // const c = 5;
+// // // console.log(c++);
+
+// // // for (let i = 0; i < list.length; i++) {
+// // //   console.log(list[i]);
+// // // }
+
+// // // list.pop();
+// // // list.push(7);
+
+// // // for (let item of list) {
+// // //   console.log(item);
+// // // }
+
+// // // function myFunc(num) {
+// // //   return num * 2;
+// // // }
+
+// // // console.log(myFunc(3));
+
+// // obj = {
+// //   name: "ali",
+// //   id: 3,
+// //   isDead: false,
+// // };
+
+// // // console.log(obj.name);
+// // obj.age = 34;
+// // // console.log(obj.age);
+// // // console.table(obj);
+
+// // // delete obj.name;
+// // // obj.name = undefined;
+
+// // // for (key in obj) {
+// // //   console.log(key, obj[key]);
+// // // }
+
+// // // list = [2, 3, 4, 6];
+
+// // // if (list.includes(4)) {
+// // //   console.log("OH yess");
+// // // }
+
+// // // for (item of list) {
+// // //   console.log(item);
+// // // }
+
+// // // let a = 4;
+// // // if (a == 4) {
+// // //   console.log("YES");
+// // // }
+
 // // list = [2, 3, 4, 6];
 
-// // let a = 3;
-// // var b = 4;
-// // const c = 5;
-// // console.log(c++);
+// // str = "ehsan";
 
-// // for (let i = 0; i < list.length; i++) {
-// //   console.log(list[i]);
+// // for (let char of str) {
+// //   console.log(char);
 // // }
 
-// // list.pop();
-// // list.push(7);
-
-// // for (let item of list) {
-// //   console.log(item);
+// // for (let i = 0; i < str.length; i++) {
+// //   console.log(`index: ${i} , value: ${str[i]}`);
 // // }
 
-// // function myFunc(num) {
-// //   return num * 2;
+// // if (str === "ehsan") {
+// //   console.log("Equal");
+// // } else {
+// //   console.log("NOT Equal");
 // // }
 
-// // console.log(myFunc(3));
-
-// obj = {
-//   name: "ali",
-//   id: 3,
-//   isDead: false,
-// };
-
-// // console.log(obj.name);
-// obj.age = 34;
-// // console.log(obj.age);
-// // console.table(obj);
-
-// // delete obj.name;
-// // obj.name = undefined;
-
-// // for (key in obj) {
-// //   console.log(key, obj[key]);
+// // console.log("****");
+// // for (let index in str) {
+// //   console.log(index);
 // // }
 
-// // list = [2, 3, 4, 6];
+// // // if (list.includes(8)) {
+// // //   console.log("3 is in the list");
+// // // }
 
-// // if (list.includes(4)) {
-// //   console.log("OH yess");
+// // // let listKey = ["name", "id", "sex", "isDead", "height"];
+
+// // // for (key of listKey) {
+// // //   if (key in obj) {
+// // //     console.log(`${key} is in the obj`);
+// // //   }
+// // // }
+
+// // if (obj["name"] === "ali2") {
+// //   console.log("the value is good");
 // // }
 
-// // for (item of list) {
-// //   console.log(item);
-// // }
+// // // if ("id" in obj) {
+// // //   console.log("id is in the obj");
+// // // }
 
-// // let a = 4;
-// // if (a == 4) {
-// //   console.log("YES");
-// // }
+// // // console.table(obj);
 
-// list = [2, 3, 4, 6];
+// let str = "323.24";
 
-// str = "ehsan";
+// let strInNum = parseFloat(str);
 
-// for (let char of str) {
-//   console.log(char);
+// let num = 3;
+
+// let numInStr = num.toString();
+
+// if (numInStr === "3") {
+//   console.log("OH YESS BABY");
 // }
 
-// for (let i = 0; i < str.length; i++) {
-//   console.log(`index: ${i} , value: ${str[i]}`);
-// }
+// console.log(strInNum);
 
-// if (str === "ehsan") {
-//   console.log("Equal");
-// } else {
-//   console.log("NOT Equal");
-// }
+// let list = [1000, 10, 1, 2, 3, 4];
 
-// console.log("****");
-// for (let index in str) {
-//   console.log(index);
-// }
+// let list2 = list.sort((a, b) => a - b);
 
-// // if (list.includes(8)) {
-// //   console.log("3 is in the list");
+// list2.reverse();
+
+// console.log(list2);
+
+// // if (str === 323) {
+// //   console.log("TRUE");
+// // } else {
+// //   console.log("FALSE");
 // // }
-
-// // let listKey = ["name", "id", "sex", "isDead", "height"];
-
-// // for (key of listKey) {
-// //   if (key in obj) {
-// //     console.log(`${key} is in the obj`);
-// //   }
-// // }
-
-// if (obj["name"] === "ali2") {
-//   console.log("the value is good");
-// }
-
-// // if ("id" in obj) {
-// //   console.log("id is in the obj");
-// // }
-
-// // console.table(obj);
-
-let str = "323.24";
-
-let strInNum = parseFloat(str);
-
-let num = 3;
-
-let numInStr = num.toString();
-
-if (numInStr === "3") {
-  console.log("OH YESS BABY");
-}
-
-console.log(strInNum);
-
-let list = [1000, 10, 1, 2, 3, 4];
-
-let list2 = list.sort((a, b) => a - b);
-
-list2.reverse();
-
-console.log(list2);
-
-// if (str === 323) {
-//   console.log("TRUE");
-// } else {
-//   console.log("FALSE");
-// }
