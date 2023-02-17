@@ -34,6 +34,18 @@ class MyNode {
       this.right.printValues();
     }
   }
+
+  dfs() {
+    if (this.left) {
+      this.left.dfs();
+    }
+    if (this.right) {
+      this.right.dfs();
+    }
+    console.log(this.value);
+  }
+
+  bfs() {}
 }
 
 // ***********************
@@ -45,4 +57,4 @@ tree.addNode(1);
 tree.addNode(2);
 tree.addNode(0);
 
-tree.printValues();
+tree.dfs();
