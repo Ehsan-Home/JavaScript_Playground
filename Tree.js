@@ -117,10 +117,27 @@ tree.addNode(-1);
 console.log(treeHeight(tree));
 
 // ***********************
+// Functions can also be declared outside of the Node class
 function treeHeight(root) {
   if (!root) {
     return -1;
   }
 
   return Math.max(1 + treeHeight(root.left), 1 + treeHeight(root.right));
+}
+
+function addNode(root, value) {
+  if (root.value <= value) {
+    if (!root.right) {
+      root.right = new MyNode(value);
+      return;
+    }
+    addNode(root.right, value);
+  } else {
+    if (!root.left) {
+      root.left = new MyNode(value);
+      return;
+    }
+    addNode(root.left, value);
+  }
 }
