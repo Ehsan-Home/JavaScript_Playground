@@ -45,7 +45,21 @@ class MyNode {
     console.log(this.value);
   }
 
-  bfs() {}
+  bfs() {
+    let queue = [];
+    queue.push(this);
+    while (queue.length !== 0) {
+      let node = queue[0];
+      queue = queue.slice(1);
+      console.log(node.value);
+      if (node.left) {
+        queue.push(node.left);
+      }
+      if (node.right) {
+        queue.push(node.right);
+      }
+    }
+  }
 }
 
 // ***********************
@@ -57,4 +71,4 @@ tree.addNode(1);
 tree.addNode(2);
 tree.addNode(0);
 
-tree.dfs();
+tree.bfs();
