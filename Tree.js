@@ -112,7 +112,15 @@ tree.addNode(1);
 tree.addNode(2);
 tree.addNode(0);
 tree.addNode(-1);
-// tree.addNode(-2);
 
-// tree.dfsPreOrder();
-console.log(tree.treeHeight());
+// console.log(tree.treeHeight());
+console.log(treeHeight(tree));
+
+// ***********************
+function treeHeight(root) {
+  if (!root) {
+    return -1;
+  }
+
+  return Math.max(1 + treeHeight(root.left), 1 + treeHeight(root.right));
+}
