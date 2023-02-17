@@ -81,6 +81,26 @@ class MyNode {
       }
     }
   }
+
+  treeHeight() {
+    let leftSum = 0;
+    let rightSum = 0;
+
+    if (this.left) {
+      leftSum = 1 + this.left.treeHeight();
+    }
+
+    if (this.right) {
+      rightSum = 1 + this.right.treeHeight();
+    }
+
+    return Math.max(leftSum, rightSum);
+    // if (!this.left || !this.right) {
+    //   return -1;
+    // }
+
+    // return Math.max(1 + this.left.treeHeight(), 1 + this.right.treeHeight());
+  }
 }
 
 // ***********************
@@ -91,5 +111,8 @@ tree.addNode(9);
 tree.addNode(1);
 tree.addNode(2);
 tree.addNode(0);
+tree.addNode(-1);
+// tree.addNode(-2);
 
-tree.dfsPreOrder();
+// tree.dfsPreOrder();
+console.log(tree.treeHeight());
