@@ -8,7 +8,7 @@ class MyNode {
   }
 
   addNode(value) {
-    if (value >= this.value) {
+    if (value <= this.value) {
       if (!this.left) {
         this.left = new MyNode(value);
         return;
@@ -25,24 +25,45 @@ class MyNode {
     }
   }
 
-  printValues() {
-    console.log(this.value);
+  // No need for printValues since we are printing using traversing
+  //   printValues() {
+  //     console.log(this.value);
+  //     if (this.left) {
+  //       this.left.printValues();
+  //     }
+  //     if (this.right) {
+  //       this.right.printValues();
+  //     }
+  //   }
+
+  dfsPostOrder() {
     if (this.left) {
-      this.left.printValues();
+      this.left.dfsPostOrder();
     }
     if (this.right) {
-      this.right.printValues();
+      this.right.dfsPostOrder();
+    }
+    console.log(this.value);
+  }
+
+  dfsInOrder() {
+    if (this.left) {
+      this.left.dfsInOrder();
+    }
+    console.log(this.value);
+    if (this.right) {
+      this.right.dfsInOrder();
     }
   }
 
-  dfs() {
+  dfsPreOrder() {
+    console.log(this.value);
     if (this.left) {
-      this.left.dfs();
+      this.left.dfsPreOrder();
     }
     if (this.right) {
-      this.right.dfs();
+      this.right.dfsPreOrder();
     }
-    console.log(this.value);
   }
 
   bfs() {
@@ -71,4 +92,4 @@ tree.addNode(1);
 tree.addNode(2);
 tree.addNode(0);
 
-tree.bfs();
+tree.dfsPreOrder();
