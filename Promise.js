@@ -1,28 +1,26 @@
-function getWeather() {
+function getToDo(id) {
   return new Promise((resolve, error) => {
-    setTimeout(() => {
-      return resolve("Cloudy");
-      //   return error("API Call failed");
-    }, 1000);
+    fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+      .then((res) => res.json())
+      .then((res) => resolve(res))
+      .catch((err) => error(err));
   });
 }
 
-function addEmoji(res) {
-  switch (res) {
-    case "Sunny":
-      return "Sunny ☀️";
-      break;
-    case "Cloudy":
-      return "Cloudy ☁️";
-    case "Rainy":
-      return "Rainy 🌧️";
-    default:
-      break;
-  }
+function setInfo(res) {
+  //   return `Title of task: ${res.title}, status: ${res.completed}`;
+  return new Promise((resolve, error) =>
+    resolve(`Title of task: ${res.title}, status: ${res.completed}`)
+  );
 }
 
-getWeather()
-  .then((res) => addEmoji(res))
-  .then((res) => console.log(res))
+getToDo(5)
+  .then((res) => setInfo(res))
   .then((res) => console.log(res))
   .catch((err) => console.log(err));
+
+// fetch(`https://jsonplaceholder.typicode.com/todos/${4}`)
+//   .then((res) => res.json())
+//   .then((res) => setInfo(res))
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err));
