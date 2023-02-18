@@ -9,16 +9,14 @@ function getToDo(id) {
 }
 
 function setInfo(res) {
-  //   return `Title of task: ${res.title}, status: ${res.completed}`;
-  return new Promise((resolve, error) =>
-    resolve(`Title of task: ${res.title}, status: ${res.completed}`)
-  );
+  return `Title of task: ${res.title}, status: ${res.completed}`;
 }
 
-getToDo(11)
+getToDo(14)
   .then((res) => setInfo(res))
   .then((res) => console.log(res))
-  .catch((err) => console.log(err));
+  .catch((err) => console.log(err))
+  .finally(() => console.log("Run always"));
 
 // fetch(`https://jsonplaceholder.typicode.com/todos/${4}`)
 //   .then((res) => res.json())
