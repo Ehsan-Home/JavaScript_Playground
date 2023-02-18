@@ -3,7 +3,6 @@ function getToDo(id) {
     fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
       .then((res) => res.json())
       .then((res) => resolve(res))
-      //   .then((res) => resolve(res.json()))
       .catch((err) => error(err));
   });
 }
