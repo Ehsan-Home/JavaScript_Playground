@@ -2,7 +2,8 @@
 
 let list = [3, 2, -1, 4, 40, 400, 5, 6];
 
-list.sort((a, b) => b - a);
+// a - b > 0 => a > b
+list.sort((a, b) => a - b);
 
 console.log(list);
 
