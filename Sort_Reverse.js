@@ -1,11 +1,16 @@
 // SORT
 
-let list = [3, 2, -1, 4, 40, 400, 5, 6];
+let list = [1, 10, 100, 2, 3];
 
 // a - b > 0 => a > b
-list.sort((a, b) => a - b);
+// list.sort((a, b) => a - b);
+list.sort();
 
-console.log(list);
+let list3 = ["e", "eb", "ea", "a", "aa"];
+
+console.log(list3.sort((a, b) => b - a));
+
+console.log("list: ", list);
 
 // REVERSE
 
