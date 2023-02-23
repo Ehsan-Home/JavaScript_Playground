@@ -19,3 +19,11 @@ let list2 = [8, 7, 6, 5, -1, 10];
 list2.reverse();
 
 console.log(list2);
+
+// PG
+
+function Sort(arr) {
+  return arr.sort((a, b) => a - b);
+}
+
+console.log("SORTED: ", Sort([3, 4, 1, 0, 12]));
