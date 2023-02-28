@@ -4,7 +4,9 @@ const arr = [1, 2, 3, 4];
 // const firstNumber = arr.shift();
 
 // arr.splice(0, 2);
-const arr2 = arr.slice(1, 3);
+// console.log("spliced ", arr);
+const arr2 = arr.slice(0, 2);
+console.log("arr 2 sliced", arr2);
 arr2.pop();
 arr2.pop();
 arr2[0] = 6;
@@ -16,6 +18,7 @@ arr2[2] = 8;
 //   console.log(`i:${i}`);
 // }
 
+// Working
 for (const item of arr2) {
   console.log(item);
 }
