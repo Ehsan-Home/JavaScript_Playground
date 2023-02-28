@@ -1,22 +1,23 @@
-// str = findBalance
-// res = find_balance
-function convert(str) {
-  let res = "";
-  for (let i = 0; i < str.length; i++) {
-    if (65 <= str.charCodeAt(i) && str.charCodeAt(i) <= 90) {
-      let lowerCaseCharAscii = str.charCodeAt(i) + 32;
-      let lowerCaseChar = String.fromCharCode(lowerCaseCharAscii);
-      res = res + "_" + lowerCaseChar;
-    } else {
-      res += str[i];
-    }
-  }
+let str = "Ehsan";
+str = str + " Ghasaei";
+console.log(str);
 
-  return res;
+// Primitive
+let a = "ali";
+let b = a;
+b += "hhhh";
+
+console.log(`a:${a}`);
+console.log(`b:${b}`);
+
+const str2 = str.slice(0, 2);
+const str3 = str.replace("E", "M");
+
+console.log("--");
+for (const ch of str3) {
+  console.log(ch);
 }
+console.log("--");
 
-let str = "getNumberOfItemsInTheOppositeArray";
-
-// console.log(convert(str));
-
-console.log(convert(str));
+console.log(`Str2:${str2}`);
+console.log(`Str3:${str3}`);

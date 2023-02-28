@@ -26,3 +26,18 @@ console.log("*****");
 
 console.log("arr", arr);
 console.log("arr2", arr2);
+
+const arr3 = [1, 2, 3, 4, 5];
+const arr4 = arr3;
+const arr5 = [1, 2, 3, 4, 5];
+
+arr4.push(6);
+
+if (arr3 === arr5) {
+  console.log("arr3 and arr5 are equal");
+} else {
+  console.log("arr3 and arr5 are NOT equal");
+}
+
+console.log(`arr3:${arr3}`);
+console.log(`arr4:${arr4}`);
