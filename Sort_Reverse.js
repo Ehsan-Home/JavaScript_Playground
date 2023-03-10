@@ -4,7 +4,7 @@ let list = [1, 10, 100, 2, 3];
 
 // a - b > 0 => a > b
 // list.sort((a, b) => a - b);
-list.sort();
+list.sort((a, b) => a - b);
 
 let list3 = ["e", "eb", "ea", "a", "aa"];
 
@@ -18,7 +18,7 @@ let list2 = [8, 7, 6, 5, -1, 10];
 
 list2.reverse();
 
-console.log(list2);
+console.log("list2", list2);
 
 // PG
 

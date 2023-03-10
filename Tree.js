@@ -104,17 +104,17 @@ class MyNode {
 }
 
 // ***********************
-let tree = new MyNode(4);
-tree.addNode(8);
-tree.addNode(7);
-tree.addNode(9);
-tree.addNode(1);
-tree.addNode(2);
-tree.addNode(0);
-tree.addNode(-1);
+// let tree = new MyNode(4);
+// tree.addNode(8);
+// tree.addNode(7);
+// tree.addNode(9);
+// tree.addNode(1);
+// tree.addNode(2);
+// tree.addNode(0);
+// tree.addNode(-1);
 
 // console.log(tree.treeHeight());
-console.log(treeHeight(tree));
+// console.log(treeHeight(tree));
 
 // ***********************
 // Functions can also be declared outside of the Node class
@@ -141,3 +141,26 @@ function addNode(root, value) {
     addNode(root.left, value);
   }
 }
+
+function addNode2(root, value) {
+  if (!root) {
+    root = new MyNode(value);
+  }
+
+  if (root.value >= value) {
+    addNode2(root.right, value);
+  } else {
+    addNode2(root.left, value);
+  }
+}
+
+let tree = new MyNode(4);
+tree.addNode(8);
+tree.addNode(7);
+tree.addNode(9);
+tree.addNode(1);
+tree.addNode(2);
+tree.addNode(0);
+tree.addNode(-1);
+
+bfs();
