@@ -59,4 +59,4 @@ async function getCommentsAndToDosInParallel(commentId, toDoId) {
   console.log("toDo", toDo);
 }
 
-// getCommentsAndToDosInParallel(1, 3);
+getCommentsAndToDosInParallel(1, 3);

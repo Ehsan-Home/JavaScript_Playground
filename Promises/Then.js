@@ -7,6 +7,7 @@ function getToDo(id) {
   });
 }
 
+// Will return a promise
 function getComments() {
   return fetch("https://jsonplaceholder.typicode.com/comments/3").then((res) =>
     res.json()
@@ -47,5 +48,3 @@ function setInfo(res) {
 // Promise.all([getComments(), getToDo(5)])
 //   .then((res) => console.log(res))
 //   .catch((err) => console.log(err));
-
-const res = getCommentsAndToDos(5);
