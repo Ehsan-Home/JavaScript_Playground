@@ -7,6 +7,12 @@ function getToDo(id) {
   });
 }
 
+function getComments() {
+  return fetch("https://jsonplaceholder.typicode.com/comments/3").then((res) =>
+    res.json()
+  );
+}
+
 function setInfo(res) {
   return `Title of task: ${res.title}, status: ${res.completed}`;
 }
@@ -23,15 +29,23 @@ function setInfo(res) {
 //   .then((res) => console.log(res))
 //   .catch((err) => console.log(err));
 
-function myPromise() {
-  return new Promise((resolve, error) => {
-    setTimeout(() => {
-      console.log("in time out");
-      resolve(888);
-    }, 1000);
-  });
-}
+// function myPromise() {
+//   return new Promise((resolve, error) => {
+//     setTimeout(() => {
+//       console.log("in time out");
+//       resolve(888);
+//     }, 1000);
+//   });
+// }
 
-myPromise()
-  .then((res) => console.log(res))
-  .catch((error) => console.log(error));
+// myPromise()
+//   .then((res) => console.log(res))
+//   .catch((error) => console.log(error));
+
+// PROMISE ALL USING THEN
+
+// Promise.all([getComments(), getToDo(5)])
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err));
+
+const res = getCommentsAndToDos(5);
