@@ -9,7 +9,7 @@ function getToDo(id) {
 
 // Will return a promise
 function getComments() {
-  return fetch("https://jsonplaceholder.typicode.com/comments/3").then((res) =>
+  return fetch("https://jsonplaceholder.typicode.com/comments/10").then((res) =>
     res.json()
   );
 }
@@ -47,4 +47,4 @@ function setInfo(res) {
 
 // Promise.all([getComments(), getToDo(5)])
 //   .then((res) => console.log(res))
-//   .catch((err) => console.log(err));
+//   .catch((err) => console.log("ERROR: ", err));
