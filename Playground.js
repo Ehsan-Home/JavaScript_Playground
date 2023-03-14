@@ -1,11 +1,5 @@
-var obj1 = {
-  address: "Mumbai,India",
-  getAddress: function () {
-    console.log(this.address);
-  },
-};
+const x = [9, 10, 1, 2, 12, 4, 4, 4, 2, 2, 12, 12, 12];
 
-var getAddress = obj1.getAddress;
-var obj2 = { address: "akshay", getAddress: getAddress };
-// obj2.getAddress();
-console.log(obj2.name);
+const ordered = [...new Set(x)].sort((a, b) => a - b);
+
+console.log(ordered);
